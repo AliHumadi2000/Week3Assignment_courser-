@@ -34,7 +34,7 @@ cacheSolve <- function(x, ...) {
   data <- x$get()
   i <- solve(data, ...)
   x$setinverse(i)
-  i
+  i # return inverse matrix
 }
 #demo for the program
 B <- matrix(c(1,2,3,4),2,2)
