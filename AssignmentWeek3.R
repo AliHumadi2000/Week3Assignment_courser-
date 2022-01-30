@@ -4,13 +4,17 @@ getwd()
 #makeCacheMatrix: This function creates a special "matrix" 
 #object that can cache its inverse.
 makeCacheMatrix <- function(x = matrix()) {
-  i <- NULL
+  i <- NULL # hold the inverse of a matrix
   set <- function(y) {
     x <<- y
     i <<- NULL
   }
   get <- function() {x}
-  setinverse <- function(inverse){ i <<- inverse}
+  setinverse <- function(inverse){ 
+    # set the value of the matrix and clear the value of inverse matrix
+    # The "<<-" operator used to set variable that already exists 
+ 
+    i <<- inverse}
   getinverse <- function() {i}
   list(set = set,
        get = get,
